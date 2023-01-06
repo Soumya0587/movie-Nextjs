@@ -25,7 +25,7 @@ const Watchlist = ({data}) => {
         <h1>watchlist</h1>
         {data.map((el)=>{
           return <div key={el.id}>
-                <Image src="https://avatars.githubusercontent.com/u/40817224?v=4" alt="dfg" width={100} height={100} />
+                <Image src={el.Images[0]} alt="dfg" width={100} height={100} />
                 <h1>{el.Title}</h1>
                 <button onClick={()=>handleRemove(el.id)}>delete</button>
             </div>
