@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import React from 'react'
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 const Pages = ({data}) => {
 const router= useRouter()
 
@@ -19,7 +20,7 @@ const router= useRouter()
   return (
     <div>
         <div>
-     
+        <Image src={data.Images[0]} alt="dfg" width={100} height={100} />
             <h1>{data.Title}</h1>
             <button onClick={()=>handleclick(data)}>add to watchlist</button>
         </div>
