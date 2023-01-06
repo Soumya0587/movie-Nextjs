@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react'
 
@@ -24,7 +24,7 @@ const Watchlist = ({data}) => {
         <h1>watchlist</h1>
         {data.map((el)=>{
           return <div key={el.id}>
-                <Image src={el.Images[0]} alt="dfg" width={100} height={100} />
+                {/* <Image src={el.Images[0]} alt="dfg" width={100} height={100} /> */}
                 <h1>{el.Title}</h1>
                 <button onClick={()=>handleRemove(el.id)}>delete</button>
             </div>
