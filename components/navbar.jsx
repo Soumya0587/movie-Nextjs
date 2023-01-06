@@ -14,7 +14,7 @@ const Navbar = () => {
     <div>
         <Link href="/">Home</Link>
         <Link href="/movies/allMovies">movies</Link>
-        {/* <button onClick={()=>onclickblogs()}>wishlist</button> */}
+        
         <button onClick={()=>goback()}>go back</button>
     </div>
   )
