@@ -18,7 +18,7 @@ const Movies = ({ data }) => {
             }}
           >
             <div>
-            <Image src={el.Images[0]} alt="dfg" width={100} height={100} />
+            <Image src="https://avatars.githubusercontent.com/u/40817224?v=4" alt="dfg" width={100} height={100} />
               <h3>{el.Title}</h3>
             </div>
           </div>
