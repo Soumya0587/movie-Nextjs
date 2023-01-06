@@ -27,8 +27,15 @@ const router= useRouter()
     </div>
   )
 }
-
-export async function getServerSideProps(context){
+export async function getStaticPaths() {
+    let r= await fetch(`http://localhost:4004/movies/`)
+    let d=await r.json()
+    return {
+      paths: d.map((blog)=>({params : {id : String(blog.id)}})),
+      fallback: false, // can also be true or 'blocking'
+    }
+  }
+export async function getStaticProps(context){
     // console.log(context)
     const {id}=context.params
     const res = await fetch(`http://localhost:4004/movies/${id}`);

@@ -33,7 +33,7 @@ const Watchlist = ({data}) => {
     </div>
   )
 }
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     const res = await fetch("http://localhost:4004/wishlists/");
     const data = await res.json();
   
